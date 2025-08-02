@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Face Stream</title>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+<body>
+    <h1>Real-time Face Recognition</h1>
+    <img id="video" width="640" height="480" />
+    <h2 id="student"></h2>
+
+    <script>
+        const socket = io();
+        socket.on('frame', data => {
+            document.getElementById('video').src = 'data:image/jpeg;base64,' + data.image;
+            const student = data.student;
+            document.getElementById('student').innerText =
+                `Student: ${student.name}, Roll: ${student.roll_number}, Status: ${student.status}`;
+        });
+    </script>
+</body>
+</html>
