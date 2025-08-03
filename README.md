@@ -24,9 +24,7 @@ A real-time face recognition-based attendance system using OpenCV, Flask, and op
 - Pandas
 - SQLite or CSV for storing data
 
-## 📂 Project Structure
 
-face-recognition-attendance/ │ ├── static/                # CSS, JS, images ├── templates/             # HTML files │   ├── index.html │   ├── register.html │   └── attendance.html │ ├── dataset/               # Saved face images ├── embeddings/            # Face embeddings (if using InsightFace) ├── attendance.csv         # Attendance records │ ├── app.py                 # Flask app ├── face_recognition.py    # Core logic (OpenCV or InsightFace) ├── camera.py              # Webcam capture & processing ├── utils.py               # Utility functions (alignment, saving, etc.) └── requirements.txt       # Required packages
 
 ## ⚙ Installation
 
